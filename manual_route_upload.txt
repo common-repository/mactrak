@@ -1,0 +1,35 @@
+--- MacTrak for FindMeSpot (Spot Tracker) - Manual Data Import Template ---
+
+Cut and Paste CSV data as plain text into this file for manual import into
+the MacTrak. Data will be added to the FindMeSpot data table. 
+
+Ensure data is added as one spot ping per line, raw data, comma separated, 
+and formatted as per the example. Do not add any header row. 
+No Quotation marks (") or Apostrophies ('), single or double. 
+
+The Columns are:
+     Latitude,Longitude,Messenger,Time,Type,[Track]
+
+Notes:
+- Spot Emails include the following lines, this is the data that imports
+  as above:
+     X-SPOT-Latitude: 20.51217
+     X-SPOT-Longitude: -86.95068
+     X-SPOT-Messenger: SpotDeviceName
+     X-SPOT-Time: 1495803296
+     X-SPOT-Type: Check-in/OK
+- Time must be a UNIX Timestamp, this can be converted in MSExcel if req.
+- Track is user defined and optional, this is the MacTrak Track number 
+   which groups Spot pings into separate lines, incrementing the Track
+   number will start a new line omitting a Track number below will use 
+   plugin default.
+- This is a Text (.txt) file and should be uploaded as such with CSV data 
+   appended. Do not upload as a .csv format
+
+---------------------------------------------------------------------------
+Do not alter this header section of this file. 
+Add data below next line. (Two example lines can be removed)
+____________________________Add Data below here____________________________
+
+20.51217,-86.95068,ExampleSpotDeviceName,1495803296,Check-in/OK,12
+-15.51217,96.95068,ExampleSpotDeviceName,1495803296,CUSTOM,12
